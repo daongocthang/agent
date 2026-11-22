@@ -12,6 +12,7 @@ build/
 dist/
 
 # IDE
+.continue/
 .vscode/
 .idea/
 

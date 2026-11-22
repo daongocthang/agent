@@ -2,6 +2,8 @@ import re
 import shlex
 import subprocess
 
+from .paths import rootpath
+
 from .models import Result
 
 
@@ -48,6 +50,7 @@ def execute(command, timeout=30, host=None, workspace=None):
             text=True,
             errors="replace",
             timeout=timeout,
+            cwd=rootpath(),
         )
 
         output = "\n".join(
